@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisine and Recipe Recommendation</title>
+
+    <!-- Link our CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+    <!-- Navbar Section Starts Here -->
+    <!-- <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="{{ url_for('static',filename='cuisine.png') }}" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="categories.html">Categories</a>
+                    </li>
+                    <li>
+                        <a href="foods.html">Foods</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>  -->
+    <!-- Navbar Section Ends Here -->
+
+    <!-- fOOD sEARCH Section Starts Here -->
+    <!-- <section class="food-search text-center">
+        <div class="container">
+            
+            <form action="food-search.html" method="POST">
+                <input type="search" name="search" placeholder="Search for Food.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-primary">
+            </form>
+
+        </div>
+    </section> -->
+    <!-- fOOD sEARCH Section Ends Here -->
+
+    <!-- CAtegories Section Starts Here -->
+    <!-- <section class="categories">
+        <div class="container">
+            <h2 class="text-center">Explore Foods</h2>
+
+            <a href="category-foods.html">
+            <div class="box-3 float-container">
+                <img src="images/pizza.jpg" alt="Pizza" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white">Pizza</h3>
+            </div>
+            </a>
+
+            <a href="#">
+            <div class="box-3 float-container">
+                <img src="images/burger.jpg" alt="Burger" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white">Burger</h3>
+            </div>
+            </a>
+
+            <a href="#">
+            <div class="box-3 float-container">
+                <img src="images/momo.jpg" alt="Momo" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white">Momo</h3>
+            </div>
+            </a>
+
+            <div class="clearfix"></div>
+        </div>
+    </section> -->
+    <!-- Categories Section Ends Here -->
+
+    <!-- fOOD MEnu Section Starts Here -->
+    <section class="food-menu">
+        <div class="container">
+            <h2 class="text-center">Data Science Mini Project - Sem 6</h2>
+            <h3 class="text-center">Cuisine and Recipe Recommendation</h3>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="{{ url_for('static',filename='cuisine.png') }}" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Objective 1</h4>
+                    <p class="food-price">Cuisine Prediction</p>
+                    <p class="food-detail">
+                        From list of ingredients and we will predict the cuisine! Our dataset consists of 50+ cuisines from all over the world.
+                    </p>
+                    <br>
+
+                    <a href="order.html" class="btn btn-primary">View Feature</a>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="{{ url_for('static',filename='recipe.png') }}" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Objective 2</h4>
+                    <p class="food-price">Recipe Recommendation</p>
+                    <p class="food-detail">
+                        From list of ingredients and we will predict the dishes which can be cooked, also we will provide the nutritional value of the dish.
+                    </p>
+                    <br>
+
+                    <a href="#" class="btn btn-primary">View Feature</a>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="{{ url_for('static',filename='similar.png') }}" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Objective 3</h4>
+                    <p class="food-price">Similar Recipes Recommendation</p>
+                    <p class="food-detail">
+                        Give us a particular recipe. And get all information from ingredients to nutritional values for top 10 most similar recipes.
+                    </p>
+                    <br>
+
+                    <a href="similar" class="btn btn-primary">View Feature</a>
+                </div>
+            </div>
+
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="{{ url_for('static',filename='search.png') }}" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4>Objective 4</h4>
+                    <p class="food-price">Search a Recipe</p>
+                    <p class="food-detail">
+                        This objective has autocomplete feature, search any recipe and get all information related to that particular recipe.
+                    </p>
+                    <br>
+
+                    <a href="search" class="btn btn-primary">View Feature</a>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+    </section>
+    <!-- fOOD Menu Section Ends Here -->
+
+    <!-- social Section Starts Here -->
+    <!-- <section class="social">
+        <div class="container text-center">
+            <ul>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
+                </li>
+            </ul>
+        </div>
+    </section> -->
+    <!-- social Section Ends Here -->
+
+    <!-- footer Section Starts Here -->
+    <section class="footer">
+        <div class="container text-center">
+            <p>Designed By <a href="#">Pratik Patil</a> and <a href="#">Prerna Tulsiani</a></p>
+        </div>
+    </section>
+    <!-- footer Section Ends Here -->
+
+</body>
+</html>

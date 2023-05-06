@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import pandas as pd
 import json
 from scipy import spatial
+import config
+import recommend_recipe
 
 def get_suggestions():
     data = pd.read_csv('cuisines.csv')
@@ -40,7 +42,21 @@ def get_similar_recipes(dish_name):
     print(indexes)
     return indexes
 
+def get_full_information_recipe(dishes_array):
+    cuisine_df = pd.read_csv('C:/Prerna Tulsiani/COEP/Sem6/Data Science Project/Final Project/Bin_cuisines.csv')
+    cuisine_dict = dict()
+    print(dishes_array)
+    for iterator in cuisine_df.index:
+        if(cuisine_df['Dish Name'][iterator] in dishes_array):
+            cuisine_dict[cuisine_df['Cuisine'][iterator]] = [cuisine_df['Dish Name'][iterator], cuisine_df['Ingredients'][iterator]]
+    
+    for k in cuisine_dict:
+        print(k, cuisine_dict)
+
 # Flask API
+
+ing_list_recipe = []
+ing_count_flag = 0
 
 app = Flask(__name__)
 
@@ -64,6 +80,18 @@ def similar_recipe():
 def similar():
     suggestions = get_suggestions()
     return render_template('similar.html',data=json.dumps(suggestions))
+
+@app.route("/search_recipe_ingredients", methods=["POST"])
+def search_recipe_ingredients():
+    ing_list = request.form['ing_array']
+    ing_list_recipe = ing_list.split("+")
+    ing_list_recipe = " ".join(ing_list_recipe)
+    dishes_array = recommend_recipe.RecSys(ing_list_recipe)
+    get_full_information_recipe(dishes_array)
+
+@app.route("/recipe_recommend")
+def recipe_recommend():
+    return render_template('recipe_recommend.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

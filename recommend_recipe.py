@@ -11,13 +11,12 @@ def get_recommendations(N, scores):
     df_recipes = pd.read_csv(config.RECIPES_PATH)
     # order the scores with and filter to get the highest N scores
     top = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:N]
-    # create dataframe to load in recommendations 
-    recommendation = pd.DataFrame(columns = ['recipe', 'ingredients', 'score'])
     count = 0
+    dishes_array = []
     for i in top:
-        print(title_parser(df_recipes['Dish Name'][i]))
+        dishes_array.append(title_parser(df_recipes['Dish Name'][i]))
         count += 1
-    return recommendation
+    return dishes_array
 
 # neaten the ingredients being outputted 
 def ingredient_parser_final(ingredient):
@@ -64,11 +63,11 @@ def RecSys(ingredients, N=5):
     scores = list(cos_sim)
 
     # Filter top N recommendations 
-    recommendations = get_recommendations(N, scores)
-    return recommendations
+    recommendations_dishes = get_recommendations(N, scores)
+    return recommendations_dishes
 
-if __name__ == "__main__":
-    # test ingredients
-    test_ingredients = "Bread Cheese Butter Sauce Mustard"
-    recs = RecSys(test_ingredients)
-    print(recs.score)
+# if __name__ == "__main__":
+#     # test ingredients
+#     test_ingredients = "Bread Cheese Butter Sauce Mustard"
+#     recs = RecSys(test_ingredients)
+#     print(recs.score)

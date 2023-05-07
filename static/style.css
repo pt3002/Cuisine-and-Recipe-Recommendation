@@ -1,80 +1,93 @@
 /* CSS for All */
-*{
+* {
     margin: 0 0;
     padding: 0 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-.container{
+
+.container {
     width: 80%;
     margin: 0 auto;
     padding: 1%;
 }
 
-.img-responsive{
+.img-responsive {
     width: 100%;
 }
-.img-curve{
+
+.img-curve {
     border-radius: 15px;
 }
 
-.text-right{
+.text-right {
     text-align: right;
 }
-.text-center{
+
+.text-center {
     text-align: center;
 }
-.text-left{
+
+.text-left {
     text-align: left;
 }
-.text-white{
+
+.text-white {
     color: white;
 }
 
-.clearfix{
+.clearfix {
     clear: both;
     float: none;
 }
 
-a{
+a {
     color: #ff6b81;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: #ff4757;
 }
 
-.btn{
+.btn {
     padding: 1%;
     border: none;
     font-size: 1rem;
     border-radius: 5px;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: #ff6b81;
     color: white;
     cursor: pointer;
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     color: white;
     background-color: #ff4757;
 }
-h2{
+
+h2 {
     color: #2f3542;
     font-size: 2rem;
     margin-bottom: 2%;
 }
-h3{
+
+h3 {
     font-size: 1.5rem;
 }
-.float-container{
+
+.float-container {
     position: relative;
 }
-.float-text{
+
+.float-text {
     position: absolute;
     bottom: 50px;
     left: 40%;
 }
-fieldset{
+
+fieldset {
     border: 1px solid white;
     margin: 5%;
     padding: 3%;
@@ -84,18 +97,20 @@ fieldset{
 
 /* CSSS for navbar section */
 
-.logo{
+.logo {
     width: 10%;
     float: left;
 }
-.menu{
+
+.menu {
     line-height: 60px;
 }
-.menu ul{
+
+.menu ul {
     list-style-type: none;
 }
 
-.menu ul li{
+.menu ul li {
     display: inline;
     padding: 1%;
     font-weight: bold;
@@ -104,7 +119,7 @@ fieldset{
 
 /* CSS for Food SEarch Section */
 
-.food-search{
+.food-search {
     background-image: url(../images/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -112,7 +127,7 @@ fieldset{
     padding: 7% 0;
 }
 
-.food-search input[type="search"]{
+.food-search input[type="search"] {
     width: 50%;
     padding: 1%;
     font-size: 1rem;
@@ -122,24 +137,23 @@ fieldset{
     border-color: black;
 }
 
-input:focus
-  {
-     outline: none;
-  }
+input:focus {
+    outline: none;
+}
 
-  #autoComplete {
+#autoComplete {
     width: 80%;
     margin-right: 3%;
     margin-left: 3%;
-  }
+}
 
 
 /* CSS for Categories */
-.categories{
+.categories {
     padding: 4% 0;
 }
 
-.box-3{
+.box-3 {
     width: 28%;
     float: left;
     margin: 2%;
@@ -148,16 +162,17 @@ input:focus
 
 /* CSS for Food Menu */
 
-.food-menu_inner{
+.food-menu_inner {
     background-color: #ececec;
     min-height: 100vh;
 }
 
-.food-menu{
+.food-menu {
     background-color: #ececec;
     padding: 2% 0;
 }
-.food-menu-box{
+
+.food-menu-box {
     width: 43%;
     padding: 2%;
     margin-top: 23px;
@@ -168,7 +183,7 @@ input:focus
     border-radius: 15px;
 }
 
-.food-menu-box-centre{
+.food-menu-box-centre {
     width: 44%;
     margin-top: 23px;
     margin-bottom: 23px;
@@ -178,42 +193,45 @@ input:focus
     border-radius: 15px;
 }
 
-.food-menu-img{
+.food-menu-img {
     width: 20%;
     float: left;
 }
 
-.food-menu-desc{
+.food-menu-desc {
     width: 70%;
     float: left;
     margin-left: 8%;
 }
 
-.food-price{
+.food-price {
     font-size: 1.2rem;
     margin: 2% 0;
 }
-.food-detail{
+
+.food-detail {
     font-size: 1rem;
     color: #747d8c;
 }
 
 
 /* CSS for Social */
-.social ul{
+.social ul {
     list-style-type: none;
 }
-.social ul li{
+
+.social ul li {
     display: inline;
     padding: 1%;
 }
 
 /* for Order Section */
-.order{
+.order {
     width: 50%;
     margin: 0 auto;
 }
-.input-responsive{
+
+.input-responsive {
     width: 96%;
     padding: 1%;
     margin-bottom: 3%;
@@ -221,8 +239,9 @@ input:focus
     border-radius: 5px;
     font-size: 1rem;
 }
-.order-label{
-    margin-bottom: 1%; 
+
+.order-label {
+    margin-bottom: 1%;
     font-weight: bold;
 }
 
@@ -230,87 +249,92 @@ input:focus
 
 /* CSS for Mobile Size or Smaller Screen */
 
-@media only screen and (max-width:768px){
-    .logo{
+@media only screen and (max-width:768px) {
+    .logo {
         width: 80%;
         float: none;
         margin: 1% auto;
     }
 
-    .menu ul{
+    .menu ul {
         text-align: center;
     }
 
-    .food-search input[type="search"]{
+    .food-search input[type="search"] {
         width: 90%;
         padding: 2%;
         margin-bottom: 3%;
     }
 
-    .btn{
+    .btn {
         width: 91%;
         padding: 2%;
     }
 
-    .food-search{
+    .food-search {
         padding: 10% 0;
     }
 
-    .categories{
+    .categories {
         padding: 20% 0;
     }
-    h2{
+
+    h2 {
         margin-bottom: 10%;
     }
-    .box-3{
+
+    .box-3 {
         width: 100%;
         margin: 4% auto;
     }
 
-    .food-menu{
+    .food-menu {
         padding: 20% 0;
         height: 100%;
     }
 
-    .food-menu-box{
+    .food-menu-box {
         width: 90%;
         padding: 5%;
         margin-bottom: 5%;
     }
-    .social{
+
+    .social {
         padding: 5% 0;
     }
-    .order{
+
+    .order {
         width: 100%;
     }
 }
 
 .github-corner:hover .octo-arm {
-  	animation: octocat-wave 560ms ease-in-out;
+    animation: octocat-wave 560ms ease-in-out;
 }
 
 @keyframes octocat-wave {
-  0%,
-  100% {
-    transform: rotate(0)
-  }
 
-  20%,
-  60% {
-    transform: rotate(-25deg)
-  }
+    0%,
+    100% {
+        transform: rotate(0)
+    }
 
-  40%,
-  80% {
-    transform: rotate(10deg)
-  }
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
 }
 
 #autoComplete {
-  background-position: 98% ;
+    background-position: 98%;
 }
 
-.autoComplete_result{
+.autoComplete_result {
     max-width: 60%;
 }
 
@@ -318,18 +342,18 @@ input:focus
 ul {
     margin: 0;
     padding: 0;
-  }
-  
-  /* Style the list items */
-  ul li {
-    list-style-type: none;  
+}
+
+/* Style the list items */
+ul li {
+    list-style-type: none;
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 8px;
     background: #888;
     font-size: 18px;
     transition: 0.2s;
-  
+
     /* make the list items unselectable */
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -339,27 +363,27 @@ ul {
     margin-right: 30%;
     margin-top: 20px;
     border-style: solid;
-  }
-  
-  /* Set all odd list items to a different color (zebra-stripes) */
-  /* ul li:nth-child(odd) {
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+/* ul li:nth-child(odd) {
     background: #f9f9f9;
   } */
-  
-  /* Darker background-color on hover */
-  /* ul li:hover {
+
+/* Darker background-color on hover */
+/* ul li:hover {
     background: #ddd;
   } */
-  
-  /* When clicked on, add a background color and strike out text */
-  /* ul li.checked {
+
+/* When clicked on, add a background color and strike out text */
+/* ul li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
   } */
-  
-  /* Add a "checked" mark when clicked on */
-  /* ul li.checked::before {
+
+/* Add a "checked" mark when clicked on */
+/* ul li.checked::before {
     content: '';
     position: absolute;
     border-color: #fff;
@@ -371,21 +395,21 @@ ul {
     height: 15px;
     width: 7px;
   } */
-  
-  /* Style the close button */
-  .close {
+
+/* Style the close button */
+.close {
     position: absolute;
     right: 0;
     top: 0;
     padding: 12px 16px 12px 16px;
-  }
-  
-  .close:hover {
+}
+
+.close:hover {
     background-color: #bbb;
-  }
-  
-  /* Style the header */
-  .header {
+}
+
+/* Style the header */
+.header {
     background-color: #ff6b81;
     padding: 30px 40px;
     color: white;
@@ -393,17 +417,17 @@ ul {
     margin-left: 30%;
     margin-right: 30%;
     margin-bottom: 30px;
-  }
-  
-  /* Clear floats after the header */
-  .header:after {
+}
+
+/* Clear floats after the header */
+.header:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Style the input */
-  #myInput {
+}
+
+/* Style the input */
+#myInput {
     margin: 0;
     border: none;
     border-radius: 0;
@@ -411,10 +435,10 @@ ul {
     padding: 10px;
     float: left;
     font-size: 16px;
-  }
-  
-  /* Style the "Add" button */
-  .addBtn {
+}
+
+/* Style the "Add" button */
+.addBtn {
     padding: 10px;
     width: 25%;
     background: #d9d9d9;
@@ -425,9 +449,9 @@ ul {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
-  }
+}
 
-  .searchRecipesBtn {
+.searchRecipesBtn {
     padding: 10px;
     width: 25%;
     background: #d9d9d9;
@@ -439,13 +463,47 @@ ul {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
-    display:inline-block;
-  }
+    display: inline-block;
+}
 
-  .searchRecipesBtn:hover {
+.searchRecipesBtn:hover {
     background-color: #bbb;
-  }
-  
-  .addBtn:hover {
+}
+
+.addBtn:hover {
     background-color: #bbb;
-  }
+}
+
+
+#table_of_items {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#table_of_items td,
+#table_of_items th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#table_of_items tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#table_of_items tr:hover {
+    background-color: #ddd;
+}
+
+#table_of_items th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}

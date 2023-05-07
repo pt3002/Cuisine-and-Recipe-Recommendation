@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- Important to make website responsive -->
@@ -9,7 +10,8 @@
     <!-- Link our CSS file -->
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Auto Complete -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
@@ -47,7 +49,7 @@
     </section>  -->
     <!-- Navbar Section Ends Here -->
     <section class="food-menu_inner">
-        
+
         <div class="container">
             <h2 class="text-center">Objective 2</h2>
             <h3 class="text-center">Recipe Recommendations from Ingredients</h3>
@@ -58,7 +60,7 @@
             <input type="text" id="myInput" placeholder="Ingredient...">
             <span onclick="newElement()" class="addBtn">Add</span>
         </div>
-        
+
         <ul id="myUL">
             <li>Butter</li>
             <li>Chicken</li>
@@ -68,9 +70,24 @@
 
         <span class="searchRecipesBtn" onclick="search()">Search Recipes</span>
 
+        <table id="table_of_items">
+            <!-- here goes our data! -->
+        </table>
+
+        <div class="container">
+        </div>
+
     </section>
+
+    <section class="footer">
+        <div class="container text-center">
+            <p>Designed By <a href="#">Pratik Patil</a> and <a href="#">Prerna Tulsiani</a></p>
+        </div>
+    </section>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-      <script type="text/javascript" src="{{url_for('static', filename='ingredient_list.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='ingredient_list.js')}}"></script>
 
 </body>
+
 </html>

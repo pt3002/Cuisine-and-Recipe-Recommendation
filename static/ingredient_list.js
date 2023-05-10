@@ -64,30 +64,35 @@ function search() {
           Recipe: recs[0][1],
           Ingredients: recs[0][2],
           Calories: recs[0][3],
+          URL: recs[0][4],
         },
         {
           Cuisine: recs[1][0],
           Recipe: recs[1][1],
           Ingredients: recs[1][2],
           Calories: recs[1][3],
+          URL: recs[1][4],
         },
         {
           Cuisine: recs[2][0],
           Recipe: recs[2][1],
           Ingredients: recs[2][2],
           Calories: recs[2][3],
+          URL: recs[2][4],
         },
         {
           Cuisine: recs[3][0],
           Recipe: recs[3][1],
           Ingredients: recs[3][2],
           Calories: recs[3][3],
+          URL: recs[3][4],
         },
         {
           Cuisine: recs[4][0],
           Recipe: recs[4][1],
           Ingredients: recs[4][2],
           Calories: recs[4][3],
+          URL: recs[4][4],
         },
       ];
 
@@ -97,6 +102,42 @@ function search() {
       generateTable(table, recommended_recipes);
       console.log(recommended_recipes);
       window.scrollTo(0, document.body.scrollHeight);
+    },
+  });
+}
+
+function search_cuisine() {
+  var ingredients = [];
+
+  for (i = 0; i < myNodelist.length; i++) {
+    var lines = myNodelist[i].innerText;
+    ingredients.push(
+      lines.substring(lines.lastIndexOf("\n") + 1, -1).replace(/\n/g, "")
+    );
+  }
+  console.log(ingredients);
+  ing_str = ingredients.join("+");
+  $.ajax({
+    type: "POST",
+    url: "/search_recipe_ingredients",
+    data: { ing_array: ing_str },
+    success: function (recs) {
+      list = [recs[0][0], recs[1][0], recs[2][0], recs[3][0], recs[4][0]]
+      list = new Set(list);
+      const row = document.getElementById("recipe_data");
+      for(let element of list){
+        const row = document.getElementById("recipe_data");
+        const outer = document.createElement("div");
+        outer.classList.add('column');
+        const para = document.createElement("div");
+        para.classList.add('card');
+        const node5 = document.createTextNode("Cuisine " + element);
+        para.appendChild(node5);
+        para.appendChild(document.createElement("br"));
+        outer.appendChild(para)
+        row.appendChild(outer);
+      }
+     
     },
   });
 }

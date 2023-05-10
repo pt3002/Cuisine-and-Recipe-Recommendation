@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisine and Recipe Recommendation</title>
+
+    <!-- Link our CSS file -->
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Auto Complete -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+    <section class="food-menu_inner">
+
+        <div class="container">
+            <h2 class="text-center">Objective 1</h2>
+            <h3 class="text-center">Cuisine Classification from Ingredients</h3>
+        </div>
+
+        <div id="myDIV" class="header">
+            <h2>Enter List of Ingredients Here</h2>
+            <input type="text" id="myInput" placeholder="Ingredient...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+
+        <ul id="myUL">
+            <li>Butter</li>
+            <li>Chicken</li>
+            <li>Honey</li>
+            <li>Bread</li>
+        </ul>
+
+        <span class="searchRecipesBtn" onclick="search_cuisine()">Search Cuisine</span>
+
+        <div class="row" id="recipe_data">
+        </div>
+
+        <div class="container">
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <div class="container text-center">
+            <p>Designed By <a href="#">Pratik Patil</a> and <a href="#">Prerna Tulsiani</a></p>
+        </div>
+    </section>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='ingredient_list.js')}}"></script>
+
+</body>
+
+</html>
